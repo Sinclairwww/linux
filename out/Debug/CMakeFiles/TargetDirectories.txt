@@ -1,0 +1,2 @@
+/home/sinclair/vscode/out/Debug/CMakeFiles/rebuild_cache.dir
+/home/sinclair/vscode/out/Debug/CMakeFiles/edit_cache.dir
