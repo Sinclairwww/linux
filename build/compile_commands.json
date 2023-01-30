@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/sinclair/linux/build",
+  "command": "/usr/bin/gcc -g -o CMakeFiles/main.dir/src/1.22/main.c.o -c /home/sinclair/linux/src/1.22/main.c",
+  "file": "/home/sinclair/linux/src/1.22/main.c"
+}
+]

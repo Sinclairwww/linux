@@ -1,0 +1,5 @@
+/home/sinclair/linux/build/CMakeFiles/edit_cache.dir
+/home/sinclair/linux/build/CMakeFiles/package_source.dir
+/home/sinclair/linux/build/CMakeFiles/rebuild_cache.dir
+/home/sinclair/linux/build/CMakeFiles/package.dir
+/home/sinclair/linux/build/CMakeFiles/main.dir

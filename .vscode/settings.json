@@ -1,6 +1,8 @@
 {
-    "cmake.sourceDirectory": "/home/sinclair/vscode",
+    "cmake.sourceDirectory": "/home/sinclair/linux",
     "files.associations": {
-        "stdbool.h": "c"
+        "stdbool.h": "c",
+        "vector": "cpp",
+        "queue": "cpp"
     }
 }
