@@ -3,6 +3,7 @@
     "files.associations": {
         "stdbool.h": "c",
         "vector": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "stdio.h": "c"
     }
 }
