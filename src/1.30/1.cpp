@@ -22,19 +22,23 @@ public:
         if ( !root ) {
             return ret;
         }
-        // TODO 做一个old queue new queue       赋值    nums不用了
-        queue< TreeNode* > nodeQueue;
-        queue< int >       numsQueue;
-        nodeQueue.push ( root );
-        while ( nodeQueue.size () != 0 ) {
+        queue< TreeNode* > old, neo;
+        neo.push ( root );    // initialize
+
+        while ( neo.size () != 0 ) {
+            old = neo;
             vector< int > level;
-            TreeNode*     curr = nodeQueue.front ();
-            numsQueue.push ( curr->val );
-            if ( curr->left != NULL )
-                nodeQueue.push ( curr->left );
-            if ( curr->right != NULL )
-                nodeQueue.push ( curr->right );
-            nodeQueue.pop ();
+            while ( old.size () != 0 ) {
+                TreeNode* curr = old.front ();
+                level.push_back ( curr->val );
+                if ( curr->left != NULL )
+                    neo.push ( curr->left );
+                if ( curr->right != NULL )
+                    neo.push ( curr->right );
+                old.pop ();
+            }
+            ret.push_back ( level );
         }
+        return ret;
     }
 };
