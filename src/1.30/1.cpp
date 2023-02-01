@@ -17,6 +17,12 @@ struct TreeNode {
 
 class Solution {
 public:
+    void empty ( queue< TreeNode* >& q ) {
+        while ( !q.empty () ) {
+            q.pop ();
+        }
+    }
+
     vector< vector< int > > levelOrder ( TreeNode* root ) {
         vector< vector< int > > ret;
         if ( !root ) {
@@ -27,9 +33,10 @@ public:
 
         while ( neo.size () != 0 ) {
             old = neo;
+            empty ( neo );
             vector< int > level;
             while ( old.size () != 0 ) {
-                TreeNode* curr = old.front ();
+                auto curr = old.front ();
                 level.push_back ( curr->val );
                 if ( curr->left != NULL )
                     neo.push ( curr->left );
@@ -39,6 +46,34 @@ public:
             }
             ret.push_back ( level );
         }
+        return ret;
+    }
+};
+
+class Solution {
+public:
+    vector< vector< int > > levelOrder ( TreeNode* root ) {
+        vector< vector< int > > ret;
+        if ( !root ) {
+            return ret;
+        }
+
+        queue< TreeNode* > q;
+        q.push ( root );
+        while ( !q.empty () ) {
+            int currentLevelSize = q.size ();
+            ret.push_back ( vector< int > () );
+            for ( int i = 1; i <= currentLevelSize; ++i ) {
+                auto node = q.front ();
+                q.pop ();
+                ret.back ().push_back ( node->val );
+                if ( node->left )
+                    q.push ( node->left );
+                if ( node->right )
+                    q.push ( node->right );
+            }
+        }
+
         return ret;
     }
 };
